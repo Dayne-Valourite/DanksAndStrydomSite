@@ -1,5 +1,6 @@
 /.phpunit.cache
 /node_modules
+#commented out as node.js is not installed on the server
 #/public/build
 /public/hot
 /public/storage
