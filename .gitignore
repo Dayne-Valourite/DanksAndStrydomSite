@@ -1,6 +1,5 @@
 /.phpunit.cache
-#Do not ignore node modules as server cannot update them
-#/node_modules
+/node_modules
 /public/build
 /public/hot
 /public/storage
