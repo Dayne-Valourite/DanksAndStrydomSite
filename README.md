@@ -1,65 +1,145 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+  <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Client Website Specifications Repository
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- This repository serves as the Laravel website for the domain danksandstrydom.co.za
+- Currently this repository is being served under app.danksandstrydom.co.za
+- Shell access has been provided to updated and install any required dependencies
+- The current root document for this laravel project falls under home/app.danskandstrydom.co.za/
+- Once in production, move the project over to /home/site
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Table of Contents
 
-## Learning Laravel
+- [Overview](#overview)
+- [Features](#features)
+- [Local Setup](#local-setup)
+- [Deployment Process](#deployment-process)
+- [Prerequisites](#prerequisites)
+- [Contributing](#contributing)
+- [License](#license)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **To be updated**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Local Setup
 
-## Laravel Sponsors
+To get the project running locally, follow these steps:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 1. Clone the Repository
 
-### Premium Partners
+```bash
+git clone https://github.com/Dayne-Valourite/DanksAndStrydomSite.git
+cd DanksAndStrydomSite
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 2. Install Dependencies
+
+```bash
+composer install
+```
+
+### 3. Configure the Database
+
+```bash
+touch database/database.sqlite
+```
+
+### 4. Create `.env` File
+
+Copy the example environment configuration:
+
+```bash
+cp .env.example .env
+```
+
+### 5. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Run Migrations
+
+This will recreate the database - or create it - as well as populate it with any seeder classes
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+### 7. Build the environment
+
+Npm run build is required to make use of installed tailwind
+
+```bash
+npm install
+npm run build
+```
+
+### 8. Serve project locally
+
+The project will be served over localhost - 127.0.0.1:8000
+
+```bash
+php artisan serve
+```
+
+## Deployment Process
+
+- Access the danksandstrydom cpanel
+- Navigate to the git version control
+- Click on the github repository DanksAndStrydomSite "manage" button
+- Navigate to Pull or Deploy Tab
+- Click "update from Remote"
+
+## Prerequisites
+
+Before setting up the project locally or configuring deployment hooks, ensure you have the following installed on your machine:
+
+- [PHP](https://www.php.net/) (version 7.4 or higher)
+- [Composer](https://getcomposer.org/)
+- [Git](https://git-scm.com/)
+- [Laravel](https://laravel.com/) (optional, as Laravel is a dependency managed via Composer)
+- [Git Bash](https://gitforwindows.org/) (for Windows users to run Bash scripts and set executable permissions)
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Contributions are welcome! Please follow these steps to contribute:
 
-## Code of Conduct
+1. **Clone the Repository**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+   ```bash
+   git clone https://github.com/Dayne-Valourite/Web.git
+   cd Web
+   ```
 
-## Security Vulnerabilities
+2. **Make Changes**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   Implement your feature or fix.
+
+3. **Stage and Commit Your Changes**
+
+   ```bash
+   git add .
+   git commit -m "Add some feature"
+   ```
+
+4. **Push to the Branch**
+
+   ```bash
+   git push origin main
+   ```
+
+**Note:** Ensure your code follows the project's coding standards and includes relevant tests where applicable.
 
 ## License
 
