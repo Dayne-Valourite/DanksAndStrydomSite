@@ -7,7 +7,7 @@
                 <div class="hidden h-[100px] items-center justify-between md:flex">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <img class="h-[50px] w-[50px]" src="#" alt="Valourite Logo">
+                            <img class="h-[60px] w-[50px]" src="{{ asset('storage/images/Logo/Danks_Logo.webp') }}" alt="Valourite Logo">
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">

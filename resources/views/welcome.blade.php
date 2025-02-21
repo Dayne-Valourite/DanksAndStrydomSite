@@ -1,9 +1,12 @@
 <x-header>
-    <main   class="min-h-screen pt-[50px]" 
-            style=" background-image: url('{{ asset('storage/images/Logo/danksandstrydom_logo.webp') }}'); 
-                    background-repeat: no-repeat; 
-                    background-size: cover; 
-                    background-position: center;">
+    <main class="h-full w-full bg-transparent">
         
+        <!-- main div -->
+         <div   class="w-full h-full" 
+                style=" background-image: url('{{ asset('storage/images/Logo/danksandstrydom_logo.webp') }}'); 
+                        background-repeat: no-repeat; 
+                        background-size: cover; 
+                        background-position: center;">
+         </div>
     </main>
 </x-header>
